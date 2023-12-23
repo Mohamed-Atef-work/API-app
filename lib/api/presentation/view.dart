@@ -2,7 +2,7 @@ import 'package:api_project/api/data/data_repository.dart';
 import 'package:api_project/api/data/data_source.dart';
 import 'package:api_project/api/domain/domain_repository.dart';
 import 'package:api_project/api/domain/use_case.dart';
-import 'package:api_project/api/presentation/widgets/custom_fading_widget.dart';
+import 'package:api_project/animation/custom_fading_widget.dart';
 import 'package:api_project/api/presentation/widgets/loading_widget.dart';
 import 'package:api_project/api/presentation/widgets/nasa_view.dart';
 import 'package:flutter/material.dart';
@@ -38,8 +38,9 @@ class NasaScreen extends StatelessWidget {
   }
 
   PreferredSizeWidget _appBar() => AppBar(
+        elevation: 10,
         centerTitle: true,
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.blueGrey,
         title: const Text("Nasa Api"),
         titleTextStyle: const TextStyle(
           fontSize: 20,

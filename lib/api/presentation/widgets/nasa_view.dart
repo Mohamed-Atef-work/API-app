@@ -12,14 +12,11 @@ class NasaView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Align(
-            alignment: Alignment.center,
-            child: Text(
-              entity.title,
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+          Text(
+            entity.title,
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(height: 5),
@@ -29,16 +26,16 @@ class NasaView extends StatelessWidget {
             fit: BoxFit.fill,
             width: double.infinity,
           ),
+          const SizedBox(height: 5),
+          Text(
+            entity.date,
+            style: const TextStyle(fontSize: 12),
+          ),
           const SizedBox(height: 10),
           Text(
             entity.explanation,
             maxLines: 15,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(fontSize: 15),
-          ),
-          const SizedBox(height: 5),
-          Text(
-            entity.date,
             style: const TextStyle(fontSize: 15),
           ),
         ],
